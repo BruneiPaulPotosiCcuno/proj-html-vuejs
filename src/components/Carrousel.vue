@@ -12,8 +12,16 @@ export default {
       store,
       // Indice de la img del carrousel
       currentIndex: 0,
+      // Memorizzo identificatore null
+      slideInterval: null
     };
   },
+  mounted() {
+    //Intervallo di scorrimento automatico
+    this.slideInterval = setInterval(this.autoSlide, 5000)
+  },
+
+
   // Add i methods del componente
   methods: {
     // Method per andare indietro nell slide
@@ -28,6 +36,11 @@ export default {
       // Aggiorno l'indice per la img
       this.currentIndex = (this.currentIndex + 1) % this.store.images.length;
     },
+    // Method per automatico trans
+    autoSlide() {
+      // Method per passare alla prossima diapositiva
+      this.nextSlide();
+    }
   },
 };
 </script>
