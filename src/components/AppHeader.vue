@@ -66,8 +66,9 @@ export default {
 
 <style scoped lang="scss">
 header {
-  background-color: #1c1c1c;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  background-image: url('../assets/img/cielostellato.PNG');
+  background-position: top;
+  background-position: 25%
 }
 
 .container {
@@ -80,7 +81,7 @@ header {
 }
 .logo img {
   height: 90px;
-  background-color: #1c1c1c;
+
   padding-right: 30px;
   padding-left: 30px;
 }
@@ -111,7 +112,7 @@ nav a {
 }
 
 nav a:hover {
-  color: #666;
+  color: #d2401e;
 }
 
 .center-section {
