@@ -40,11 +40,13 @@ export default {
       <img :src="image" alt="Slide" class="carousel-image" />
     </div>
     <!-- btn per avanti e indietro -->
-    <button class="prev" @click="prevSlide">&#10094;</button>
-    <button class="next" @click="nextSlide">&#10095;</button>
+    <button class="prev" @click="prevSlide"><span>PREV</span></button>
+    <button class="next" @click="nextSlide"><span>NEXT</span></button>
   </div>
 </template>
 
+
+<!-- Ogni span deve avere un rotate di noventa gradi -->
 <style scoped lang="scss">
 .carrousel {
   position: relative;
@@ -65,28 +67,56 @@ export default {
   display: block;
 }
 
-.prev,
-.next {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  background-color: rgba(0, 0, 0, 0.5);
-  color: white;
-  border: none;
-  padding: 10px;
-  font-size: 18px;
-}
-
 .prev {
   left: 0;
+  position: absolute;
+  transform: translateX(-75%);
+  background-color: #ffffff;
+  color: white;
+  border: none;
+  padding: 40px;
+  border-radius: 100%;
+  cursor: pointer;
+
 }
+
 
 .next {
   right: 0;
+  position: absolute;
+  transform: translateX(+75%);
+  background-color: #ffffff;
+  color: white;
+  border: none;
+  padding: 40px;
+  border-radius: 100%;
+  cursor: pointer;
 }
 
 .carousel-image {
   max-height: 300px;
   width: auto;
+}
+
+
+
+.prev span{
+  color: #d2401e;
+  transform: rotate(+90deg);
+  font-size: 12px;
+  font-weight: 700;
+  display: flex;
+  position: relative;
+  left: 37px;
+}
+
+.next span{
+  color: #d2401e;
+  transform: rotate(-90deg); 
+  font-size: 12px;
+  font-weight: 700;
+  display: flex;
+  position: relative;
+  right: 37px;
 }
 </style>
