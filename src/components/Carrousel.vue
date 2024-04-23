@@ -1,3 +1,4 @@
+
 <script>
 //importo lo store from store.js
 
@@ -18,8 +19,14 @@ export default {
   },
   mounted() {
     //Intervallo di scorrimento automatico
-    this.slideInterval = setInterval(this.autoSlide, 5000)
+    this.slideInterval = setInterval(this.autoSlide, 3000)
   },
+
+  //!!!!E BUONA PRATICA PULIRE QUANDO VIENE MONTATO OGNI INTERVALO PER BUONA PRATICA PER GESTIONE DI MEMORIA!!!!///
+  beforeUnmount() {
+    clearInterval(this.slideInterval);
+  },
+  //!!!!E BUONA PRATICA PULIRE QUANDO VIENE MONTATO OGNI INTERVALO PER BUONA PRATICA PER GESTIONE DI MEMORIA!!!!///
 
 
   // Add i methods del componente
