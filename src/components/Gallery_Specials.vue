@@ -8,11 +8,12 @@ export default {
 
 <template>
   <div>
-    <div class="componente">
+    <div class="component">
       <div class="imagen">
-        <img src="../assets/img/h1-img-4.jpg" alt="Descripción de la imagen">
+        <img src="../assets/img/h1-img-4.jpg" alt="">
+
       </div>
-      <div class="texto">
+      <div class="text">
         <div class="specials">
           <h2>SPECIALS*</h2>
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent ut.</p>
@@ -48,7 +49,7 @@ export default {
 </template>
 
 <style scoped lang="scss">
-.componente {
+.component {
   display: flex;
 }
 
@@ -56,7 +57,7 @@ export default {
   flex: 1;
 }
 
-.texto {
+.text {
   flex: 1;
   display: flex;
   justify-content: center;
