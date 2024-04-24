@@ -20,6 +20,13 @@ export const store = reactive({
     image2,
     image3,
   ],
+
+  textData: [
+    '"FORGET THE MAINSTREAM PIZZERIAS; THIS HIDDEN GEM DELIVERS THE ULTIMATE NEW YORK-STYLE PIZZA SLICE IN NAPLES"',
+    '"SKIP THE HIP PIZZERIAS; THIS UNDER-THE-RADAR SPOT WHIPS UP THE FINEST NEW YORK-STYLE PIZZA SLICE IN NAPLES"',
+    '"FORGET THE TRENDY PIZZA SHOPS, THIS HIDDEN SPOT MAKES THE BEST NEW YORK-STYLE PIZZA SLICE IN NAPLES"',
+    // Agrega más textos si es necesario
+  ],
   //!imagini per bg fixare
   // backgroundImages: [
   //   backgroundImage1,

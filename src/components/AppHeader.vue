@@ -91,6 +91,7 @@ header {
   padding: 15px 15px;
   color: #f2f2f2;
   border: none;
+  cursor: pointer;
 }
 
 nav ul {

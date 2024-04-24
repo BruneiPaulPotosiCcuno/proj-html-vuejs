@@ -5,7 +5,7 @@
 import { store } from "../store.js";
 
 export default {
-  name: "Carrousel",
+  name: "Carrousel_2",
   // Faccio i dati del componente
   data() {
     return {
@@ -19,7 +19,7 @@ export default {
   },
   mounted() {
     //Intervallo di scorrimento automatico
-    this.slideInterval = setInterval(this.autoSlide, 3000)
+    this.slideInterval = setInterval(this.autoSlide, 6000)
   },
 
   //!!!!E BUONA PRATICA PULIRE QUANDO VIENE MONTATO OGNI INTERVALO PER BUONA PRATICA PER GESTIONE DI MEMORIA!!!!///
@@ -54,24 +54,29 @@ export default {
 
 <template>
   <div class="carrousel">
-    <!-- Itero ogni img nell array -->
-    <div class="slide" v-for="(image, index) in store.images" :key="index" :class="{ active: index === currentIndex }">
-    <!-- img attuale -->
-      <img :src="image" alt="Slide" class="carousel-image" />
+    <!-- Itera sobre cada texto en el array -->
+    <div class="slide" v-for="(text, index) in store.textData" :key="index" :class="{ active: index === currentIndex }">
+      <!-- Muestra el texto -->
+      <span><img src="../assets/img/quote-img.png" alt=""></span>
+      <p>{{ text }}</p>
+      <p class="comunity">WASHINGTON POST 2018</p>
+      <div class="dots">
+        <span v-for="(slide, i) in store.textData" :key="i" :class="{ active: i === currentIndex }"></span>
+      </div>
+      
     </div>
-    <!-- btn per avanti e indietro -->
+    <!-- Botones para retroceder y avanzar -->
     <button class="prev" @click="prevSlide"><span>PREV</span></button>
     <button class="next" @click="nextSlide"><span>NEXT</span></button>
   </div>
 </template>
-
 
 <!-- Ogni span deve avere un rotate di noventa gradi -->
 <style scoped lang="scss">
 .carrousel {
   position: relative;
   margin: auto;
-  background-image: url("../assets/img/cielostellato.PNG");
+  background-image: url("../assets/img/h3-testimonials-bckgrnd.jpg");
   background-position: center;
   display: flex;
   justify-content: center;
@@ -81,6 +86,8 @@ export default {
 
 .slide {
   display: none;
+  width: 900px;
+  text-align: center;
 }
 
 .slide.active {
@@ -111,13 +118,9 @@ export default {
   padding: 40px;
   border-radius: 100%;
   cursor: pointer;
-  
 }
 
-.carousel-image {
-  max-height: 300px;
-  width: auto;
-}
+
 
 
 
@@ -139,5 +142,48 @@ export default {
   display: flex;
   position: relative;
   right: 37px;
+}
+
+p{
+  display: flex;
+  color: #2e2e2e;
+  font-size: 26px;
+  text-align: center;
+  font-weight: bold;
+  line-height: 40px;
+}
+
+img{
+  width: 50px;
+  position: relative;
+  bottom: 24px;
+}
+
+.comunity{
+  color: #d13916;
+  justify-content: center;
+  position: relative;
+  top: 10px;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+/* QUESTO E LO STYLE PEAR I DOTS DEI SLIDE */
+.dots {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.dots span {
+  width: 12px;
+  height: 12px;
+  margin: 0 5px;
+  border-radius: 50%;
+  background-color: #e4e4d4; 
+}
+
+.dots span.active {
+  background-color: #b7882b; 
 }
 </style>
