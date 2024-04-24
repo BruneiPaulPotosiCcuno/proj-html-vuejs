@@ -6,6 +6,7 @@ import Cards from './components/Cards.vue';
 import Gallery_Specials from './components/Gallery_Specials.vue';
 import Cards2 from './components/Cards2.vue';
 import Partners from './components/Partners.vue';
+import AppFooter from './components/AppFooter.vue';
 
 import { store } from './store.js';
 export default {
@@ -16,7 +17,8 @@ export default {
     Cards,
     Gallery_Specials,
     Cards2,
-    Partners
+    Partners,
+    AppFooter
   },
 }
 </script>
@@ -29,6 +31,7 @@ export default {
   <Gallery_Specials></Gallery_Specials>
   <Cards2></Cards2>
   <Partners></Partners>
+  <AppFooter></AppFooter>
 
 </template>
 
