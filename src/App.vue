@@ -4,6 +4,7 @@ import Carrousel from './components/Carrousel.vue';
 import Carrousel_2 from './components/Carrousel_2.vue';
 import Cards from './components/Cards.vue';
 import Gallery_Specials from './components/Gallery_Specials.vue';
+import Cards2 from './components/Cards2.vue';
 
 import { store } from './store.js';
 export default {
@@ -12,7 +13,8 @@ export default {
     Carrousel,
     Carrousel_2,
     Cards,
-    Gallery_Specials
+    Gallery_Specials,
+    Cards2
   },
 }
 </script>
@@ -23,6 +25,7 @@ export default {
   <Cards></Cards>
   <Carrousel_2></Carrousel_2>
   <Gallery_Specials></Gallery_Specials>
+  <Cards2></Cards2>
 
 </template>
 
