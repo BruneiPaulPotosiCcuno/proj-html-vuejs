@@ -3,6 +3,7 @@ import AppHeader from './components/AppHeader.vue';
 import Carrousel from './components/Carrousel.vue';
 import Carrousel_2 from './components/Carrousel_2.vue';
 import Cards from './components/Cards.vue';
+import Gallery_Specials from './components/Gallery_Specials.vue';
 
 import { store } from './store.js';
 export default {
@@ -10,7 +11,8 @@ export default {
     AppHeader,
     Carrousel,
     Carrousel_2,
-    Cards
+    Cards,
+    Gallery_Specials
   },
 }
 </script>
@@ -20,7 +22,7 @@ export default {
   <Carrousel></Carrousel>
   <Cards></Cards>
   <Carrousel_2></Carrousel_2>
-  
+  <Gallery_Specials></Gallery_Specials>
 
 </template>
 
